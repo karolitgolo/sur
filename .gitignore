@@ -3,4 +3,6 @@
 /build
 /out
 /env.properties
+/app
+/\hss_err*
 

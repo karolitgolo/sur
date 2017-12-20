@@ -14,9 +14,21 @@ configurations{
 repositories {
     jcenter()
     mavenCentral()
+    maven {
+        url "http://dl.bintray.com/itgolo/libs"
+    }
 }
 
 dependencies {
+    requireRunJar group: 'org.apache.commons', name: 'commons-text', version: '1.2'
+    requireRunJar group: 'org.jdbi', name: 'jdbi3', version: '3.0.0-beta2'
+    requireRunJar group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.0'
+    requireRunJar group: 'pl.itgolo.libs', name: 'chromium', version: '1.0.0.0a'
+    requireRunJar group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
+    requireRunJar group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    requireRunJar group: 'commons-net', name: 'commons-net', version: '3.6'
+    requireRunJar group: 'org.slf4j', name: 'slf4j-simple', version: '1.8.0-beta0'
+    testCompile group: 'org.zeroturnaround', name: 'zt-zip', version: '1.12'
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile configurations.requireRunJar
 }

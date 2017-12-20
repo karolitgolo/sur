@@ -39,8 +39,9 @@ task copyAppFiles() {
     }
 }
 
-task publishNewVersionApp(dependsOn: ['clean', 'copyCompileLibs', 'createJarFile', 'copyAppFiles', 'test', 'integrationTest', 'functionalTest', 'deployApp']){
-    copyCompileLibs.mustRunAfter clean
+task publishNewVersionApp(dependsOn: ['clean', 'assemble','copyCompileLibs', 'createJarFile', 'copyAppFiles', 'test', 'integrationTest', 'functionalTest', 'deployApp']){
+    assemble.mustRunAfter clean
+    copyCompileLibs.mustRunAfter assemble
     createJarFile.mustRunAfter copyCompileLibs
     copyAppFiles.mustRunAfter createJarFile
     test.mustRunAfter copyAppFiles
