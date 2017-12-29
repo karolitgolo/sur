@@ -1,0 +1,12 @@
+/wp-content/plugins/allemechanik/modules/themes/assets/js/vendors/jquery.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/themes/assets/js/vendors/popper.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/themes/assets/js/vendors/tether.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/themes/assets/js/vendors/bootstrap.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/themes/assets/js/vendors/responsive-tabs.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/themes/assets/js/vendors/jquery-validate.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/themes/assets/js/vendors/readmore.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/themes/assets/js/themes-front.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/comments/assets/js/vendors/rating-star.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/comments/assets/js/comments-front.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/authorization/assets/js/authorization.js?ver=1.0.0.0
+/wp-content/plugins/allemechanik/modules/profile/assets/js/profile.js?ver=1.0.0.0

@@ -53,6 +53,7 @@ public class SmtpConfigGmail extends SmtpConfig {
             this.browser.actions.fillInput("#from_name", this.prettyAppUrl);
             this.browser.actions.fillInput("#oauth_user_email", this.googleDevLogin);
             this.browser.actions.fillInput("#from_email", this.googleDevLogin);
+            this.browser.actions.fillInput("#smtp_port", "587");
             this.browser.actions.clickReload("#gmail_smtp_update_settings", 60);
             this.browser.actions.waitElement(".updated.fade", 20);
 
@@ -99,6 +100,7 @@ public class SmtpConfigGmail extends SmtpConfig {
             this.browser.actions.fillInput("#oauth_client_id", this.apiCredentialIdClient);
             this.browser.actions.fillInput("#oauth_client_secret", this.apiCredentialSecretKey);
             this.browser.actions.fillInput("#from_name", this.prettyAppUrl);
+            this.browser.actions.fillInput("#smtp_port", "587");
             this.browser.actions.fillInput("#oauth_user_email", this.googleDevLogin);
             this.browser.actions.fillInput("#from_email", this.googleDevLogin);
             this.browser.actions.clickReload("#gmail_smtp_update_settings", 60);
@@ -141,11 +143,6 @@ public class SmtpConfigGmail extends SmtpConfig {
     protected void after() throws StepCompanyCatalogueException {
         if (this.omittedStep){
             return;
-        }
-        try {
-            NavigateToAction.sleep(20000);
-        } catch (ChromiumException e) {
-            e.printStackTrace();
         }
     }
 }

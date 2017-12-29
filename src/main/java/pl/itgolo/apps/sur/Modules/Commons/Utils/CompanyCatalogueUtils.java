@@ -19,13 +19,13 @@ public class CompanyCatalogueUtils {
      */
     public static void authorization(String username, String password, String urlDirSkeleton, Browser browser) throws ChromiumException {
         browser.actions.navigateTo(urlDirSkeleton + "/wp-admin", 60);
-        if (!BrowserUtils.existElement("#wpadminbar span.username", browser)){
+        if (!BrowserUtils.existElement("#menu-dashboard", browser)){
             browser.actions.navigateTo(urlDirSkeleton + "/logowanie/");
             browser.actions.fillInput("#email", username);
             browser.actions.fillInput("#password", password);
             browser.actions.clickReload(".jumbotron button[type=submit]", 60);
             browser.actions.navigateTo(urlDirSkeleton + "/wp-admin", 60);
-            if (!BrowserUtils.existElement("#wpadminbar span.username", browser)){
+            if (!BrowserUtils.existElement("#menu-dashboard", browser)){
                 throw new ChromiumException("Can not authorized to admin panel for user: " + username);
             }
         }

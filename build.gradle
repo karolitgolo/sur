@@ -14,12 +14,12 @@ configurations{
 repositories {
     jcenter()
     mavenCentral()
-    maven {
-        url "http://dl.bintray.com/itgolo/libs"
-    }
+    maven { url "http://dl.bintray.com/itgolo/libs" }
+    maven { url "http://dl.bintray.com/rebigo/libs" }
 }
 
 dependencies {
+    requireRunJar group: 'pl.rebigo.libs', name: 'helper', version: '1.0.0.5'
     requireRunJar group: 'org.apache.commons', name: 'commons-text', version: '1.2'
     requireRunJar group: 'org.jdbi', name: 'jdbi3', version: '3.0.0-beta2'
     requireRunJar group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.0'

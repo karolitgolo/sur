@@ -1,12 +1,16 @@
 package pl.itgolo.apps.sur.Modules.Commons.Utils;
 
-import pl.itgolo.libs.chromiumresources.Actions.CreateBinJcef;
-
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * The type File utils.
@@ -73,5 +77,19 @@ public class FileUtils {
             fos.write(bytes, 0, byteCount);
         }
         return file;
+    }
+
+    /**
+     * To lines list.
+     *
+     * @param file the file
+     * @return the list
+     * @throws IOException the io exception
+     */
+    public static List<String> toLines(File file) throws IOException {
+        String content =  new String(Files.readAllBytes(file.toPath()));
+        List<String> lines = new ArrayList<>();
+        lines.addAll(Arrays.asList(content.split(System.lineSeparator())));
+        return lines;
     }
 }
